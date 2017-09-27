@@ -1,0 +1,11 @@
+--python-kinds=-i
+--recurse=yes
+--exclude=build
+--exclude=dist
+--exclude=node_modules
+--exclude=bower_components
+--exclude=docs
+--exclude=env
+--exclude=log
+--exclude=.tmp
+--exclude=.git
