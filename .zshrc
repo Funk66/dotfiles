@@ -111,11 +111,7 @@ compinit
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
-alias book="ssh pi@onyx.dynu.com 'tail -n 5 /home/pi/scripts/packt/log'"
-alias dell='ssh guillermo@192.168.1.100'
-alias zero='ssh pi@zero'
 alias wake='sudo ether-wake -b 00:19:b9:1b:e2:b2'
-alias anni='ssh anni@192.168.1.102'
 alias jazz='python3 ~/Workspace/oss/Jazzifier/update.py -f ~/Workspace/oss/Jazzifier/conf.yml'
 alias weather='curl wttr.in/Berlin'
 alias moon='curl wttr.in/Moon'
@@ -123,33 +119,9 @@ alias vimdiff="nvim -d"
 alias activate="source env/bin/activate"
 alias reload="deactivate && activate"
 
-rpi='pi@onyx.dynu.com:~'
-dell='guillermo@dell:~'
-anni='anni@192.168.1.102:~'
-zero='pi@zero:~'
-
-export BITELIO_SECRET='asdflkjasdflkjsdfkljsdf'
-export DOMAIN='http://localhost:9000'
-export SESSION_SECRET='ASDLFKJASÑDLKJSDFKLJ'
-export KANBAN_API_URL='http://localhost:5000'
-# API
-#export SENTRY_DSN='https://dcac8c7603b8400ea92a3d5036484eab:799c6ffb77f54afdb61bd95171fba2ee@sentry.io/186891'
-# Frontend
-#export SENTRY_SDN='https://6175a420892e486193d6bc06dacff61d:9ce3389d381e406e90f08d7d4fe2ef7d@sentry.io/187179'
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-#export GOPATH=~/Workspace/go
-#export PATH=$GOPATH:$GOPATH/bin:$PATH
-
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vi_mode)
-# Add vcs
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs virtualenv root_indicator vcs)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_DELIMITER='..'
-
-
-alias devtunnel='ssh tms-dev01 -L 9200:localhost:9200'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
