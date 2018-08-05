@@ -10,7 +10,7 @@ export ZSH=/home/guillermo/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
  #ZSH_THEME="robbyrussell"
-POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='nerdfont-complete'
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -55,7 +55,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux vi-mode)
+plugins=(git tmux vi-mode docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,3 +125,5 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_DELIMITER='..'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(gopass completion zsh | head -n -1 | tail -n +2)
+compdef _gopass gopass
