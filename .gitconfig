@@ -4,6 +4,7 @@
 [core]
   editor = nvim
   excludesfile = /home/guillermo/.gitignore_global
+  pager = delta
 [mergetool]
   path = nvim
   trustExitCode = true
@@ -32,3 +33,7 @@
   default = current
 [init]
   templatedir = ~/.config/git/templates
+[delta]
+  line-numbers = true
+[interactive]
+  diffFilter = delta --color-only
