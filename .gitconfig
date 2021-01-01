@@ -1,24 +1,34 @@
 [user]
-	name = Guillermo Guirao Aguilar
-	email = contact@guillermoguiraoaguilar.com
+  name = Guillermo Guirao Aguilar
+  email = contact@guillermoguiraoaguilar.com
 [core]
-	editor = nvim
-	excludesfile = /home/guillermo/.gitignore_global
+  editor = nvim
+  excludesfile = /home/guillermo/.gitignore_global
 [mergetool]
-	path = nvim
+  path = nvim
+  trustExitCode = true
 [merge]
-	tool = vimdiff
+  tool = vimdiff
 [mergetool "vimdiff"]
-	path = nvim
+  path = nvim
 [diff]
   tool = vimdiff
 [difftool]
   prompt = false
+  trustExitCode = true
 [alias]
-  lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''        %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
   lg = !"git lg1"
+  up = pull --rebase --prune --autostash
+  pushmaster = push --force origin HEAD:for_master_gga
+  pushbranch = !git push --force origin HEAD:refs/heads/for_$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)_gga
+  back = checkout -
+[color]
+	ui = true
+[pull]
+	rebase = false
 [push]
-	default = current
+  default = current
 [init]
-	templatedir = ~/.config/git/templates
+  templatedir = ~/.config/git/templates
